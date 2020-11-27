@@ -1,20 +1,17 @@
 # users/forms.py
+
+
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
-from .models import CustomUser
+from .models import Customer
 
-class CustomUserCreationForm(UserCreationForm):
-
+class CustomerCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
-        model = CustomUser
-        # fields = UserCreationForm.Meta.fields + ('age',) # old ch 9 (default)
-        fields = ('username', 'email', 'age',) # new ch 9
+        model = Customer
+        fields = UserCreationForm.Meta.fields + ('customer_id', 'age', 'phone_number', 'user_id',)
 
-
-class CustomUserChangeForm(UserChangeForm):
-    
+class CustomerChangeForm(UserChangeForm):
     class Meta:
-        model = CustomUser
-        # fields = UserChangeForm.Meta.fields # old ch 9 (default)
-        fields = ('username', 'email', 'age',) # new ch 9
+        model = Customer
+        fields = UserChangeForm.Meta.fields

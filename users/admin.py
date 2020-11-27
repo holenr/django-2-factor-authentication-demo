@@ -1,17 +1,19 @@
-from django.contrib import admin
+# users/admin.py
 
-# all ch 8:
-from django.contrib.auth.admin import UserAdmin 
+# Note: uncommenting this creates errors! (server does not run...)
 
-# Register your models here.
-from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser
+# # register your models here:
+# from django.contrib import admin
+# from django.contrib.auth.admin import UserAdmin 
 
-class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
-    model = CustomUser
-    list_display = ['email', 'username', 'age', 'is_staff', ] # new
+# from .forms import CustomerCreationForm, CustomerChangeForm
+# from .models import Customer
+
+# class CustomerAdmin(UserAdmin):
+#     add_form = CustomerCreationForm
+#     form = CustomerChangeForm
+#     model = Customer
+#     # list_display = ['customer_id', 'username', 'email', 'age', 'phone_number', 'user_id', 'is_staff', ] # new
 
 
-admin.site.register(CustomUser, CustomUserAdmin)
+# admin.site.register(Customer, CustomerAdmin)
