@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 django = "===2.2.4"
+twilio = "*"
+django-twilio = "*"
 
 [requires]
 python_version = "3.8"

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig', # new ch 8
+    
+    'django_twilio', # added Roland
 ]
 
 MIDDLEWARE = [
