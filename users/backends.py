@@ -14,8 +14,11 @@ class CustomerBackend(ModelBackend):
                 # here normal django authentication should have succeeded.
                 # TODO: add TWILIO SMS Authentication here?
                 # ...
-                # edited Roland:
-                
+                # begin edits Roland:
+                phone_number = customer.phone_number
+                print(phone_number) # works!
+                # ...
+                # end edits Roland.
                 return customer.user
         except Customer.DoesNotExist:
             pass
